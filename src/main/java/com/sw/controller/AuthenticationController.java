@@ -183,6 +183,21 @@ public class AuthenticationController {
     	return AppResult.ok();
     }
 
+    @PostMapping("/reg/step1")
+    public AppResult regstep1(String mobile,String code,String password) {
+    	if(StringUtils.isBlank(mobile)) {
+    		return AppResult.build(ErrorEnum.MOBILE_IS_NULL);
+    	}
+    	if(StringUtils.isBlank(code)) {
+    		return AppResult.build(ErrorEnum.SMS_CODE_NULL);
+    	}
+    	if(StringUtils.isBlank(password)) {
+    		return AppResult.build(ErrorEnum.PWD_NULL);
+    	}
+    	AppUser user = appUserService.mobileRegisterStep1(mobile, password, code);
+    	return AppResult.ok(user);
+    }
+    
 
     
     @PostMapping("/users/register")

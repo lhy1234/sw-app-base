@@ -30,7 +30,7 @@ public class GlobalExceptionHandler {
             return AppResult.build(be.getStatus(),be.getMsg());
         } else {
             //对系统级异常进行日志记录
-        	LOGGER.error("系统异常:" + e.getMessage(), e);
+        	LOGGER.error("系统异常: {} " , e.getMessage(), e);
         }
         return AppResult.build(ErrorEnum.SYS_EXCEPTION);
     }

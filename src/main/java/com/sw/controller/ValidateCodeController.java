@@ -58,7 +58,6 @@ public class ValidateCodeController {
         //发送短信验证码
         redisTemplate.opsForValue().set(AppConstants.KEY_SMS_CODE+mobile, smsCode.getCode(),10,TimeUnit.MINUTES);
         smsCodeSender.send(mobile, smsCode.getCode());
-        
         return AppResult.ok();
 	}
 }

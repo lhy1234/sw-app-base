@@ -67,7 +67,7 @@ public class RedisValidateCodeRepository /* implements ValidateCodeRepository */
 		String mobile = request.getParameter("mobile");
 
 		if (StringUtils.isBlank(mobile)) {
-			throw new BusinessException("【验证码redis存储实现】mobile为空，未携带mobile参数");
+			throw new BusinessException(4444,"【验证码redis存储实现】mobile为空，未携带mobile参数");
 		}
 
 		return AppConstants.KEY_SMS_CODE + mobile;

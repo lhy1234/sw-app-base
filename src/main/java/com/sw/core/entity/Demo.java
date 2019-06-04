@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *  MybatisPlus会默认使用实体类的类名到数据中找对应的表. 
  * </p>
  *
  * @author lihaoyang123
@@ -20,20 +20,27 @@ public class Demo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    /*
+	 * @TableId:
+	 * 	 value: 指定表中的主键列的列名， 如果实体属性名与列名一致，可以省略不指定. 
+	 *   type: 指定主键策略. 
+	 */
+    @TableId(value = "id", type = IdType.ID_WORKER)  
+    private Long id;
     private String name;
     private Integer sex;
     private Integer age;
     @TableField("create_time")
     private Date createTime;
 
-
-    public Integer getId() {
+    //@TableField(exist=false)
+    
+    
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
