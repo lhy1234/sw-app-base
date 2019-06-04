@@ -11,7 +11,9 @@ public class BeanConfig {
 
 	  /**
 	   * 注意是org.springframework.security.crypto.password.PasswordEncoder
-     * @Description: 密码的加密解密
+     * @Description: 
+     * 			密码的加密解密，使用的是springsecurity oauth的加密类需要引入maven
+     * 			spring-cloud-starter-oauth2
      * @param @return
      * @return PasswordEncoder
      * @throws
