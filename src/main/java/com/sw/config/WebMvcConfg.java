@@ -33,7 +33,8 @@ public class WebMvcConfg extends WebMvcConfigurerAdapter {
 				.excludePathPatterns("/",
 						"/sw/app/users/login/account",//用户名密码登录
 						"/sw/app/users/login/code",   //短信验证码登录
-					
+						
+						"/log/*",                      //测试日志
 						"/hello",                     //测试
 						"/sw/app/users/register",     //用户注册
 						"/sw/app/reg/step1",
