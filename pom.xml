@@ -23,6 +23,11 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<!-- spring security oauth2相关,用其中的加密类 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -132,6 +137,12 @@
 		    <artifactId>commons-codec</artifactId>
 		    <version>1.12</version>
 		</dependency>
+		
+		<!--添加freeMarker-->  
+       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
 		
 	</dependencies>
 

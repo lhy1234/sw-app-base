@@ -1,5 +1,7 @@
 package com.sw.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -8,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class BeanConfig {
+	
+	
 
 	  /**
 	   * 注意是org.springframework.security.crypto.password.PasswordEncoder
@@ -25,4 +29,8 @@ public class BeanConfig {
         //BCryptPasswordEncoder implements PasswordEncoder
         return new BCryptPasswordEncoder();
     }
+    
+    
+   
+
 }

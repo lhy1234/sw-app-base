@@ -28,24 +28,25 @@ public class WebMvcConfg extends WebMvcConfigurerAdapter {
 	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(signHandlerInterceptor())
-				.addPathPatterns("/**")
-				.excludePathPatterns("/",
-						"/sw/app/users/login/account",//用户名密码登录
-						"/sw/app/users/login/code",   //短信验证码登录
-						
-						"/log/*",                      //测试日志
-						"/hello",                     //测试
-						"/sw/app/users/register",     //用户注册
-						"/sw/app/reg/step1",
-						"/sw/app/code/sms/send"       //发送短信验证码
-						
-						
-						
-						);
+//		registry.addInterceptor(signHandlerInterceptor())
+//				.addPathPatterns("/**")
+//				.excludePathPatterns("/",
+//						"/sw/app/users/login/account",//用户名密码登录
+//						"/sw/app/users/login/code",   //短信验证码登录
+//						"/demo/*",
+//						"/log/*",                      //测试日志
+//						"/hello",                     //测试
+//						"/sw/app/users/register",     //用户注册
+//						"/sw/app/reg/step1",
+//						"/sw/app/code/sms/send"       //发送短信验证码
+//						
+//						
+//						
+//						);
 		//registry.addInterceptor(loginHandlerInterceptor())
 				//.addPathPatterns("/**")
 				//.excludePathPatterns("/user/login/account");
+		super.addInterceptors(registry);
 	} 
 	
 	
